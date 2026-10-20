@@ -9,7 +9,7 @@ A four-page HTML website for North Star Bakery with a shared responsive CSS desi
 - `about.html` — Bakery story, sourcing philosophy, team highlights, and audio welcome message.
 - `contact.html` — Contact/pre-order form with labels, fieldsets, legends, and HTML built-in validation.
 - `style.css` — Shared visual system, Flexbox layouts, and responsive media queries.
-- `media/` — Provided logo, product/store images, welcome audio, and an optimized copy of the short behind-the-scenes video.
+- `` — Provided logo, product/store images, welcome audio, and an optimized copy of the short behind-the-scenes video.
 
 ## Design system
 
