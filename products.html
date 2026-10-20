@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore breads, pastries, and celebration cakes from North Star Bakery.">
+  <title>Products | North Star Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="brand" href="index.html" aria-label="North Star Bakery home">
+        <img src="media/bakery-logo_c.png" alt="North Star Bakery logo">
+        <span>North Star<br>Bakery</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" aria-current="page">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact &amp; Pre-orders</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="container">
+    <section class="hero" aria-labelledby="products-heading">
+      <div class="hero-copy">
+        <p class="eyebrow">Baked for everyday moments</p>
+        <h1 id="products-heading">Our Products</h1>
+        <p class="lead">Fresh favorites for weekday mornings, family tables, and special celebrations.</p>
+        <p>Browse our usual categories and price ranges. We do not offer online checkout, but we welcome questions and pre-order requests.</p>
+        <div class="actions"><a class="button" href="contact.html">Ask about an order</a></div>
+      </div>
+      <div class="hero-media"><img src="media/bakery-bread_c.png" alt="Freshly baked artisan bread loaves" fetchpriority="high"></div>
+    </section>
+
+    <section aria-labelledby="categories-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Small batches, familiar favorites</p>
+        <h2 id="categories-heading">Browse our bakery</h2>
+      </div>
+      <div class="card-grid">
+        <article class="product-card">
+          <img src="media/bakery-bread_c.png" alt="Rustic artisan bread loaves with crisp crusts" loading="lazy">
+          <h3>Breads</h3>
+          <p>Rustic loaves with crisp crusts and soft, flavorful centers. Perfect for family dinners, sandwiches, or sharing.</p>
+          <p class="price">Typical price: $5–$12 per loaf</p>
+        </article>
+        <article class="product-card">
+          <img src="media/bakery-feature-small_c.png" alt="Seasonal pastry selection from North Star Bakery" loading="lazy">
+          <h3>Pastries</h3>
+          <p>Flaky croissants, seasonal danishes, muffins, and other morning treats baked in small batches.</p>
+          <p class="price">Typical price: $3–$6 each</p>
+        </article>
+        <article class="product-card">
+          <img src="media/bakery-signature-loaf_c.png" alt="Fresh Signature Loaf from the bakery" loading="lazy">
+          <h3>Cakes and celebration bakes</h3>
+          <p>Custom designs for birthdays, showers, and gatherings. Contact us to discuss sizes and design options.</p>
+          <p class="price">Typical price: $25–$90+, depending on size and design</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="featured-section" aria-labelledby="seasonal-heading">
+      <div class="section-heading">
+        <p class="eyebrow">A fresh idea each season</p>
+        <h2 id="seasonal-heading">Featured seasonal items</h2>
+      </div>
+      <picture>
+        <source media="(max-width: 600px)" srcset="media/bakery-feature-small_c.png">
+        <source media="(min-width: 601px)" srcset="media/bakery-feature-large_c.png">
+        <img src="media/bakery-feature-large_c.png" alt="Seasonal featured bakery item arranged for display" loading="lazy">
+      </picture>
+      <p>Our featured selection changes with the seasons and what our bakers are excited to make. Contact us to ask what is available this week.</p>
+    </section>
+    <section class="panel" aria-labelledby="order-info-heading">
+      <h2 id="order-info-heading">Planning an order?</h2>
+      <p>Prices are estimates and may vary by size, ingredients, and customization. There is no online checkout; send an inquiry so we can confirm availability and details.</p>
+      <a class="button" href="contact.html">Request a pre-order</a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 North Star Bakery. Made with care in our neighborhood.</p>
+      <p><a href="contact.html">Questions or pre-orders?</a></p>
+    </div>
+  </footer>
+</body>
+</html>
