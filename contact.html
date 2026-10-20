@@ -6,6 +6,7 @@
   <meta name="description" content="Contact North Star Bakery with questions or pre-order requests.">
   <title>Contact &amp; Pre-orders | North Star Bakery</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -39,43 +40,50 @@
     <section class="split" aria-labelledby="request-heading">
       <div class="form-panel">
         <h2 id="request-heading">Send an inquiry or pre-order request</h2>
-        <form action="#" method="post">
+        <form id="preorder-form" action="#" method="post" novalidate>
+          <p class="help-text">Fields marked required must be completed. We will show you how to fix any errors before the form can continue.</p>
           <fieldset>
             <legend>Your contact information</legend>
             <div class="form-field">
               <label for="name">Full name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
+              <input type="text" id="name" name="name" autocomplete="name" required minlength="2" aria-describedby="name-error">
+              <span class="field-error" id="name-error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="email">Email address</label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+              <span class="field-error" id="email-error" aria-live="polite"></span>
             </div>
           </fieldset>
           <fieldset>
             <legend>Request details</legend>
             <div class="form-field">
               <label for="pickup-date">Preferred pickup date</label>
-              <input type="date" id="pickup-date" name="pickup-date" required>
+              <input type="date" id="pickup-date" name="pickup-date" required aria-describedby="pickup-date-error">
+              <span class="field-error" id="pickup-date-error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="request-type">Type of request</label>
-              <select id="request-type" name="request-type" required>
+              <select id="request-type" name="request-type" required aria-describedby="request-type-error">
                 <option value="">Select a request type</option>
                 <option value="pre-order">Pre-order request</option>
                 <option value="general-question">General question</option>
               </select>
+              <span class="field-error" id="request-type-error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="item-details">Item details (items, quantities, sizes, or event details)</label>
-              <textarea id="item-details" name="item-details" rows="5" required></textarea>
+              <textarea id="item-details" name="item-details" rows="5" required minlength="10" aria-describedby="item-details-error"></textarea>
+              <span class="field-error" id="item-details-error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="allergy-notes">Allergy notes (if applicable)</label>
               <textarea id="allergy-notes" name="allergy-notes" rows="3" placeholder="Tell us about allergies or ingredient concerns."></textarea>
             </div>
           </fieldset>
-          <p class="help-text">This form is a demonstration. It does not send or store requests until a form-processing service is connected.</p>
-          <button type="submit">Submit request</button>
+          <p class="help-text">This form is a demonstration. A successful validation check does not send an order; a form-processing service would need to be connected.</p>
+          <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+          <button type="submit">Validate request</button>
         </form>
       </div>
 
@@ -100,3 +108,4 @@
   </footer>
 </body>
 </html>
+
