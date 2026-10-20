@@ -158,3 +158,14 @@ input:focus, select:focus, textarea:focus { border-color: var(--sage); }
   .hero { gap: 4rem; }
   .card-grid { gap: 1.5rem; }
 }
+/* Touchstone 4: interactive product filtering and accessible validation feedback */
+.category-filter { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1rem 0 0.5rem; }
+.category-filter .filter-button { background: transparent; color: var(--cocoa); border-color: var(--sage); }
+.category-filter .filter-button[aria-pressed="true"],
+.category-filter .filter-button:hover { background: var(--sage); border-color: var(--sage); color: var(--cream); }
+.filter-status { margin: 0.4rem 0 1rem; color: var(--sage); font-weight: 700; }
+.product-card[hidden] { display: none !important; }
+.field-error { display: block; margin-top: 0.25rem; color: #9b2c1f; font-size: 0.92rem; font-weight: 700; }
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border: 2px solid #9b2c1f; }
+.form-status { padding: 0.8rem 1rem; border-radius: 0.6rem; border: 1px solid var(--sage); background: rgba(102, 120, 95, 0.12); }
+.form-status[hidden] { display: none; }
