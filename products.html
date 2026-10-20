@@ -6,6 +6,7 @@
   <meta name="description" content="Explore breads, pastries, and celebration cakes from North Star Bakery.">
   <title>Products | North Star Bakery</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -37,25 +38,33 @@
       <div class="hero-media"><img src="bakery-bread_c.png" alt="Freshly baked artisan bread loaves" fetchpriority="high"></div>
     </section>
 
-    <section aria-labelledby="categories-heading">
+    <section aria-labelledby="categories-heading" id="product-browser">
       <div class="section-heading">
         <p class="eyebrow">Small batches, familiar favorites</p>
         <h2 id="categories-heading">Browse our bakery</h2>
+        <p>Choose a category to find what you are looking for. Your selection will be remembered on this device.</p>
       </div>
-      <div class="card-grid">
-        <article class="product-card">
+      <div class="category-filter" role="group" aria-label="Filter products by category">
+        <button type="button" class="filter-button" data-filter="all" aria-pressed="true">All products</button>
+        <button type="button" class="filter-button" data-filter="breads" aria-pressed="false">Breads</button>
+        <button type="button" class="filter-button" data-filter="pastries" aria-pressed="false">Pastries</button>
+        <button type="button" class="filter-button" data-filter="cakes" aria-pressed="false">Cakes</button>
+      </div>
+      <p id="filter-status" class="filter-status" aria-live="polite">Showing all products.</p>
+      <div class="card-grid" id="product-grid">
+        <article class="product-card" data-category="breads">
           <img src="bakery-bread_c.png" alt="Rustic artisan bread loaves with crisp crusts" loading="lazy">
           <h3>Breads</h3>
           <p>Rustic loaves with crisp crusts and soft, flavorful centers. Perfect for family dinners, sandwiches, or sharing.</p>
           <p class="price">Typical price: $5–$12 per loaf</p>
         </article>
-        <article class="product-card">
+        <article class="product-card" data-category="pastries">
           <img src="bakery-feature-small_c.png" alt="Seasonal pastry selection from North Star Bakery" loading="lazy">
           <h3>Pastries</h3>
           <p>Flaky croissants, seasonal danishes, muffins, and other morning treats baked in small batches.</p>
           <p class="price">Typical price: $3–$6 each</p>
         </article>
-        <article class="product-card">
+        <article class="product-card" data-category="cakes">
           <img src="bakery-signature-loaf_c.png" alt="Fresh Signature Loaf from the bakery" loading="lazy">
           <h3>Cakes and celebration bakes</h3>
           <p>Custom designs for birthdays, showers, and gatherings. Contact us to discuss sizes and design options.</p>
